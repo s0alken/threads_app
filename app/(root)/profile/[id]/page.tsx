@@ -1,12 +1,15 @@
-import ProfileHeader from "@/components/shared/ProfileHeader";
-import ThreadsTab from "@/components/shared/ThreadsTab";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { profileTabs } from "@/constants";
-import { fetchUser } from "@/lib/actions/user.actions";
-import { currentUser } from "@clerk/nextjs";
-import { TabsContent } from "@radix-ui/react-tabs";
 import Image from "next/image";
-import { redirect } from 'next/navigation'
+import { currentUser } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
+
+import { profileTabs } from "@/constants";
+
+import ThreadsTab from "@/components/shared/ThreadsTab";
+import ProfileHeader from "@/components/shared/ProfileHeader";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import { fetchUser } from "@/lib/actions/user.actions";
+
 
 const Page = async ({ params }: { params: { id: string } }) => {
     const user = await currentUser();
