@@ -10,7 +10,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { fetchUser } from "@/lib/actions/user.actions";
 
-
 const Page = async ({ params }: { params: { id: string } }) => {
     const user = await currentUser();
 
